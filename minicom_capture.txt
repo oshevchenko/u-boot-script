@@ -1,0 +1,288 @@
+
+NOTICE:  4 GB DDR4, 64-bit, CL=15, ECC on
+INFO:    Time used by DDR driver 427 ms
+INFO:    SoC workaround for Errata A008850 Post-Phase was applied
+INFO:    RCW BOOT SRC is QSPI
+NOTICE:  BL2: v2.12.0(release):lf-6.12.34-2.1.0-dirty
+NOTICE:  BL2: Built : 08:27:20, Aug 25 2025
+INFO:    Configuring TrustZone Controller
+INFO:    BL2: Doing platform setup
+INFO:    BL2: Loading image id 3
+INFO:    Loading image id=3 at address 0xfbe00000
+INFO:    Image id=3 loaded: 0xfbe00000 - 0xfbe0f645
+INFO:    BL2: Loading image id 4
+INFO:    Loading image id=4 at address 0xfc000000
+INFO:    Image id=4 loaded: 0xfc000000 - 0xfc0915b0
+INFO:    BL2: Loading image id 5
+INFO:    Loading image id=5 at address 0x82000000
+INFO:    Image id=5 loaded: 0x82000000 - 0x820dc080
+NOTICE:  BL2: Booting BL31
+INFO:    Entry point address = 0xfbe00000
+INFO:    SPSR = 0x3cd
+NOTICE:  BL31: v2.12.0(release):lf-6.12.34-2.1.0-dirty
+NOTICE:  BL31: Built : 08:27:20, Aug 25 2025
+NOTICE:  Welcome to e_cca_hemc_main_1 BL31 Phase
+INFO:    ARM GICv2 driver initialized
+INFO:    BL31: Initializing runtime services
+INFO:    BL31: cortex_a72: CPU workaround for erratum 859971 was applied
+WARNING: BL31: cortex_a72: CPU workaround for erratum 1319367 was missing!
+INFO:    BL31: cortex_a72: CPU workaround for CVE 2017_5715 was applied
+INFO:    BL31: cortex_a72: CPU workaround for CVE 2018_3639 was applied
+INFO:    BL31: cortex_a72: CPU workaround for CVE 2022_23960 was applied
+INFO:    BL31: Initializing BL32
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x82000000
+INFO:    SPSR = 0x3c9
+
+
+U-Boot 2025.04-g44898b9f3cfe-dirty (Sep 03 2025 - 09:56:50 +0000)
+
+SoC:  LS1046AE Rev1.0 (0x87070010)
+Clock Configuration:
+       CPU0(A72):1800 MHz  CPU1(A72):1800 MHz  CPU2(A72):1800 MHz  
+       CPU3(A72):1800 MHz  
+       Bus:      700  MHz  DDR:      2100 MT/s  FMAN:     800  MHz
+Reset Configuration Word (RCW):
+       00000000: 0e150012 10000000 00000000 00000000
+       00000010: 11335a06 40005012 40025000 c1000000
+       00000020: 00000000 00000000 00000000 000389fa
+       00000030: 20004500 08201002 00000096 00000001
+Model: E-CCA-HEMC-MAIN-1 Board
+DRAM:  3.9 GiB (DDR4, 64-bit, CL=15, ECC on)
+GPIO4 gpdir = 0xC0
+GPIO4 gpdat = 0x1C00
+Using SERDES1 Protocol: 4403 (0x1133)
+Using SERDES2 Protocol: 23046 (0x5a06)
+PCIe1: pcie@3400000 Root Complex: x1 gen1
+PCIe2: pcie@3500000 disabled
+PCIe3: pcie@3600000 Root Complex: no link
+Core:  54 devices, 19 uclasses, devicetree: separate
+NAND:  0 MiB
+MMC:   FSL_SDHC: 0
+Loading Environment from SPIFlash... SF: Detected mt25qu512a with page size 256 Bytes, erase size 64 KiB, total 64 MiB
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+OK
+EEPROM: Invalid ID (ff ff ff ff)
+In:    serial@21c0500
+Out:   serial@21c0500
+Err:   serial@21c0500
+SEC0:  RNG instantiated
+Net:   Fman1: Uploading microcode version 108.4.9
+Could not get PHY for mdio@fc000: addr 2
+Could not get PHY for mdio@fc000: addr 2
+Could not get PHY for mdio@fc000: addr 3
+Could not get PHY for mdio@fc000: addr 4
+eth1: fm1-mac3Could not get PHY for mdio@fc000: addr 3
+Could not get PHY for mdio@fc000: addr 4
+
+Hit any key to stop autoboot:  5  0
+=> 
+=> 
+=> ext4load usb 0:4 0xa0000000 fip_uboot.bin
+** Bad device specification usb 0 **
+Couldn't find partition usb 0:4
+Can't set block device
+=> usb rescan
+USB is stopped. Please issue 'usb start' first.
+=> usb start
+starting USB...
+Bus usb@2f00000: Register 200017f NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+Bus usb@3000000: Register 200017f NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+Bus usb@3100000: Register 200017f NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus usb@2f00000 for devices... 2 USB Device(s) found
+scanning bus usb@3000000 for devices... 1 USB Device(s) found
+scanning bus usb@3100000 for devices... 1 USB Device(s) found
+       scanning usb for storage devices... 1 Storage Device(s) found
+=> usb start         usb rescan          ext4load usb 0:4 0xa0000000 fip_uboot.bin
+1559845 bytes read in 16 ms (93 MiB/s)
+=> 
+=> usb start
+=> ext4load usb 0:4 0xa0000000 boot.scr
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+Resetting EP 1...
+WARN endpoint is halted
+WARN endpoint is halted
+WARN endpoint is halted
+** Invalid partition 4 **
+Couldn't find partition usb 0:4
+Can't set block device
+=> INFO:    SMMU Cache Unlocking is Configured.
+INFO:    SoC workaround for Errata A008850 Early-Phase was applied
+INFO:    SoC workaround for Errata A010539 was applied
+INFO:    RCW BOOT SRC is QSPI
+INFO:    SoC workaround for DDR Errata A008511 was applied
+INFO:    SoC workaround for DDR Errata A009803 was applied
+INFO:    SoC workaround for DDR Errata A009942 was applied
+INFO:    SoC workaround for DDR Errata A010165 was applied
+INFO:    time base 0 ms
+NOTICE:  Fixed DDR on board
+INFO:    Time after parsing SPD 4 ms
+INFO:    Time before programming controller 8 ms
+
+NOTICE:  4 GB DDR4, 64-bit, CL=15, ECC on
+INFO:    Time used by DDR driver 427 ms
+INFO:    SoC workaround for Errata A008850 Post-Phase was applied
+INFO:    RCW BOOT SRC is QSPI
+NOTICE:  BL2: v2.12.0(release):lf-6.12.34-2.1.0-dirty
+NOTICE:  BL2: Built : 08:27:20, Aug 25 2025
+INFO:    Configuring TrustZone Controller
+INFO:    BL2: Doing platform setup
+INFO:    BL2: Loading image id 3
+INFO:    Loading image id=3 at address 0xfbe00000
+INFO:    Image id=3 loaded: 0xfbe00000 - 0xfbe0f645
+INFO:    BL2: Loading image id 4
+INFO:    Loading image id=4 at address 0xfc000000
+INFO:    Image id=4 loaded: 0xfc000000 - 0xfc0915b0
+INFO:    BL2: Loading image id 5
+INFO:    Loading image id=5 at address 0x82000000
+INFO:    Image id=5 loaded: 0x82000000 - 0x820dc080
+NOTICE:  BL2: Booting BL31
+INFO:    Entry point address = 0xfbe00000
+INFO:    SPSR = 0x3cd
+NOTICE:  BL31: v2.12.0(release):lf-6.12.34-2.1.0-dirty
+NOTICE:  BL31: Built : 08:27:20, Aug 25 2025
+NOTICE:  Welcome to e_cca_hemc_main_1 BL31 Phase
+INFO:    ARM GICv2 driver initialized
+INFO:    BL31: Initializing runtime services
+INFO:    BL31: cortex_a72: CPU workaround for erratum 859971 was applied
+WARNING: BL31: cortex_a72: CPU workaround for erratum 1319367 was missing!
+INFO:    BL31: cortex_a72: CPU workaround for CVE 2017_5715 was applied
+INFO:    BL31: cortex_a72: CPU workaround for CVE 2018_3639 was applied
+INFO:    BL31: cortex_a72: CPU workaround for CVE 2022_23960 was applied
+INFO:    BL31: Initializing BL32
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x82000000
+INFO:    SPSR = 0x3c9
+
+
+U-Boot 2025.04-g44898b9f3cfe-dirty (Sep 03 2025 - 09:56:50 +0000)
+
+SoC:  LS1046AE Rev1.0 (0x87070010)
+Clock Configuration:
+       CPU0(A72):1800 MHz  CPU1(A72):1800 MHz  CPU2(A72):1800 MHz  
+       CPU3(A72):1800 MHz  
+       Bus:      700  MHz  DDR:      2100 MT/s  FMAN:     800  MHz
+Reset Configuration Word (RCW):
+       00000000: 0e150012 10000000 00000000 00000000
+       00000010: 11335a06 40005012 40025000 c1000000
+       00000020: 00000000 00000000 00000000 000389fa
+       00000030: 20004500 08201002 00000096 00000001
+Model: E-CCA-HEMC-MAIN-1 Board
+DRAM:  3.9 GiB (DDR4, 64-bit, CL=15, ECC on)
+GPIO4 gpdir = 0xC0
+GPIO4 gpdat = 0xC00
+Using SERDES1 Protocol: 4403 (0x1133)
+Using SERDES2 Protocol: 23046 (0x5a06)
+PCIe1: pcie@3400000 Root Complex: x1 gen1
+PCIe2: pcie@3500000 disabled
+PCIe3: pcie@3600000 Root Complex: no link
+Core:  54 devices, 19 uclasses, devicetree: separate
+NAND:  0 MiB
+MMC:   FSL_SDHC: 0
+Loading Environment from SPIFlash... SF: Detected mt25qu512a with page size 256 Bytes, erase size 64 KiB, total 64 MiB
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+## Warning: Unknown environment variable access method 'w'
+OK
+EEPROM: Invalid ID (ff ff ff ff)
+In:    serial@21c0500
+Out:   serial@21c0500
+Err:   serial@21c0500
+SEC0:  RNG instantiated
+Net:   Fman1: Uploading microcode version 108.4.9
+Could not get PHY for mdio@fc000: addr 2
+Could not get PHY for mdio@fc000: addr 2
+Could not get PHY for mdio@fc000: addr 3
+Could not get PHY for mdio@fc000: addr 4
+eth1: fm1-mac3Could not get PHY for mdio@fc000: addr 3
+Could not get PHY for mdio@fc000: addr 4
+
+Hit any key to stop autoboot:  5  0
+=> 
+=> 
+=> usb start
+starting USB...
+Bus usb@2f00000: Register 200017f NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+Bus usb@3000000: Register 200017f NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+Bus usb@3100000: Register 200017f NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus usb@2f00000 for devices... 2 USB Device(s) found
+scanning bus usb@3000000 for devices... 1 USB Device(s) found
+scanning bus usb@3100000 for devices... 1 USB Device(s) found
+       scanning usb for storage devices... 1 Storage Device(s) found
+=> ext4load usb 0:4 0xa0000000 boot.scr
+336 bytes read in 2 ms (164.1 KiB/s)
+=> 
+=> source 0xa0000000
+## Executing script at a0000000
+=== Starting Custom USB Script ===
+SF: Detected mt25qu512a with page size 256 Bytes, erase size 64 KiB, total 64 MiB
+NOR Flash found! Checking for firmware update...
+=== Script Finished ===
+=> 
